@@ -1,0 +1,52 @@
+{
+  "devices": [
+    {
+      "id": "MD-001",
+      "type": "X-Ray Machine",
+      "facility": "Apollo",
+      "status": "Online",
+      "battery": 85,
+      "lastService": "2024-10-12",
+      "contract": "AMC",
+      "amcStatus": "Expired",
+      "lastServiceDate": "2025-07-01",
+      "amcStartDate": "2025-07-09",
+      "amcEndDate": "2025-07-04"
+    },
+    {
+      "id": "mg 11",
+      "type": "ctr",
+      "facility": "Apollo",
+      "status": "Online",
+      "battery": 100,
+      "lastService": "2025-07-02",
+      "contract": "CMC",
+      "lastServiceDate": "2025-06-30",
+      "amcStatus": "Active",
+      "amcStartDate": "2025-07-01",
+      "amcEndDate": "2025-07-06"
+    },
+    {
+      "id": "nh 77",
+      "type": "hgfd",
+      "facility": "Apollo",
+      "status": "Online",
+      "battery": 100,
+      "lastServiceDate": "2025-07-04",
+      "amcStatus": "Active",
+      "amcStartDate": "2025-07-01",
+      "amcEndDate": "2025-07-10"
+    },
+    {
+      "id": "ji99",
+      "type": "ce",
+      "facility": "Apollo",
+      "status": "Online",
+      "battery": 100,
+      "lastServiceDate": "2025-07-01",
+      "amcStatus": "Active",
+      "amcStartDate": "2025-07-01",
+      "amcEndDate": "2025-07-05"
+    }
+  ]
+}
