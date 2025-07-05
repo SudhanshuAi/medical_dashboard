@@ -18,7 +18,15 @@ export const loadStateFromStorage = () => {
     if (serializedState === null) {
       return undefined;
     }
-    return JSON.parse(serializedState);
+    const state = JSON.parse(serializedState) || {};
+    return {
+      inventory: state.inventory || { devices: [] },
+      installations: state.installations || { installations: [] },
+      training: state.training || { logs: [] },
+      serviceVisits: state.serviceVisits || { visits: [] },
+      photoLogs: state.photoLogs || { logs: [] },
+      alerts: state.alerts || { alerts: [] },
+    };
   } catch (err) {
     console.warn('Failed to load state from localStorage:', err);
     return undefined;

@@ -66,8 +66,8 @@ export const ServiceVisitForm = ({ onSubmit, initialData }: Props) => {
         e.preventDefault();
         if (initialData) {
             // When updating, we pass the full visit object back, including the ID.
-            // Note: Attachments are not being updated in this simplified form.
-            onSubmit({ ...formData, id: initialData.id, attachments: initialData.attachments });
+            // Ensure attachments is always an array.
+            onSubmit({ ...formData, id: initialData.id, attachments: initialData.attachments || [] });
         } else {
             onSubmit(formData);
         }
