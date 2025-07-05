@@ -73,6 +73,3 @@ yarn build
 The output will be in the `dist/` directory.
 
 ---
-
-
-## 📁 Project Structure
