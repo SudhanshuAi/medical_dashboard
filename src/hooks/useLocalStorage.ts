@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
 import { clearLocalStorage, exportLocalStorageData, importLocalStorageData } from '../store/localStorageMiddleware';
 
 export const useLocalStorage = () => {

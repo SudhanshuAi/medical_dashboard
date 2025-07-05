@@ -35,9 +35,9 @@ const ServiceVisitPage = () => {
 
     const handleSubmit = (visitData: NewServiceVisit | ServiceVisit) => {
         if ('id' in visitData) {
-            dispatch(updateServiceVisit(visitData as ServiceVisit));
+            dispatch(updateServiceVisit({ ...visitData, attachments: visitData.attachments || [] } as ServiceVisit));
         } else {
-            dispatch(addServiceVisit(visitData as NewServiceVisit));
+            dispatch(addServiceVisit({ ...visitData, attachments: visitData.attachments || [] } as NewServiceVisit));
         }
         handleCloseForm();
     };
@@ -62,7 +62,7 @@ const ServiceVisitPage = () => {
 
             <Grid container spacing={3} sx={{ mt: 2 }}>
                 {visits.map((visit: ServiceVisit) => (
-                    <Grid item xs={12} md={6} lg={4} key={visit.id}>
+                    <Grid size={{ xs: 12, md: 6, lg: 4 }} key={visit.id}>
                         <Card className="device-card">
                             <CardContent>
                                 <Typography variant="h6">Device ID: {visit.deviceId}</Typography>
